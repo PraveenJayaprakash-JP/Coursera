@@ -7,6 +7,7 @@
 # Author: Coursera Learning Project
 # Date: $(date '+%Y-%m-%d')
 # License: Apache 2.0
+# Updated: Feature branch enhancement for pull request demo
 
 # Function to display usage information
 show_usage() {
@@ -44,16 +45,16 @@ calculate_simple_interest() {
     local interest=$(echo "scale=2; ($principal * $rate * $time) / 100" | bc -l)
     local total_amount=$(echo "scale=2; $principal + $interest" | bc -l)
     
-    echo "========================================"
+    echo "========================================="
     echo "         SIMPLE INTEREST CALCULATOR"
-    echo "========================================"
+    echo "========================================="
     echo "Principal Amount: \$$principal"
     echo "Interest Rate:    $rate% per annum"
     echo "Time Period:      $time years"
-    echo "----------------------------------------"
+    echo "-----------------------------------------"
     echo "Simple Interest:  \$$interest"
     echo "Total Amount:     \$$total_amount"
-    echo "========================================"
+    echo "========================================="
 }
 
 # Initialize variables
@@ -99,7 +100,7 @@ fi
 # Interactive mode if no arguments provided
 if [[ -z "$PRINCIPAL" && -z "$RATE" && -z "$TIME" ]]; then
     echo "Simple Interest Calculator - Interactive Mode"
-    echo "============================================="
+    echo "=============================================="
     
     # Get principal amount
     while true; do
